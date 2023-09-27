@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+</head>
+<body>
+    <h2>all users</h2>
+    <hr/>
+    <ul>
+        {% for item in users %}
+            <li>{{ item.name}}, {{ item.age }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
