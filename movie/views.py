@@ -46,9 +46,6 @@ def deleteCollect(request):
 
 
 def query(request):
-    res = UserModel.checkUser(request)
-    if (res != 'check_success'):
-        return res
     # 获取收藏的电影
     user = Collect.objects.get(id=1)
     print(user.movies.all())

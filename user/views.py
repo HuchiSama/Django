@@ -48,15 +48,6 @@ def register(request):
 
     return JsonResponse({'message': 'fail'})
 
-def checkUser(request):
-    #cookie方法
-    # uid = request.COOKIES.get('uid')
-    #session方法
-    uid = request.session.get('uid')
-    if (not uid):
-        return HttpResponseRedirect('/login')
-    return 'check_success'
-
 def logout(request):
     # cookie
     # uid = request.COOKIES.get('uid')
